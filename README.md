@@ -28,4 +28,24 @@ http://kerneldriver.wordpress.com/2012/10/21/configuring-wpa2-using-wpa_supplica
 http://askubuntu.com/questions/3913/start-ssh-server-on-boot
 
 #### Mouse input events abfangen:
+Install evdev:
+sudo apt-get install python-evdev
+
+if evdev is not available, install manually
+Install pip:
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+
+instal evdev with pip:
+sudo pip install evdev
+
+#### Start script at boot
+sudo crontab -e
+
+Add line:
+@reboot python /path/to/mouse_control.py &
+
+and save crontab
+
+
 
