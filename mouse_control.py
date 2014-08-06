@@ -48,6 +48,8 @@ while True:
 							timedelta = event.timestamp() - RIGHT_BTN_PRESS_TIMESTAMP
 							if timedelta >= 3.0:
 								print "Pressed %.2f seconds. Shutting down" % timedelta
+								shutdown = subprocess.Popen(["sudo", "shutdown", "-h", "now"])
+								exit(0)
 								
 	except:
 		print "Mouse disconnected."
