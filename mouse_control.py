@@ -3,7 +3,7 @@ from select import select
 import subprocess
 from time import sleep
 
-LIVESTREAM_URL="http://fritz.de/livemp3"
+LIVESTREAM_URL="http://stream.spreeradio.de/spreeradio-live/mp3-256"
 ls = None
 playing = False
 RIGHT_BTN_PRESS_TIMESTAMP = None
